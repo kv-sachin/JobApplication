@@ -1,3 +1,5 @@
+# This the the requiremnts that need to be added
+
 asgiref==3.2.3
 Django==1.11.29
 djangorestframework==3.9.4
