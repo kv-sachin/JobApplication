@@ -1,3 +1,5 @@
+# Thsi is one change in views.py file
+
 from django.shortcuts import render
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from testapp.models import blorejobs, chennaijobs, hydjobs, punejobs, noidajobs
