@@ -1,7 +1,7 @@
 from rest_framework import viewsets
-from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs
+from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs, indorejobs
 from testapp.api.serializers import HydJobsSerializer, PuneJobsSerializer, ChennaiJobsSerializer, BloreJobsSerializer,\
-     NoidaJobSerializer
+     NoidaJobSerializer, IndoreJobSerializer
 
 
 class HydJobsCRUDCBV(viewsets.ModelViewSet):
@@ -31,4 +31,9 @@ class BloreJobsCRUDCBV(viewsets.ModelViewSet):
 class NoidaJobsCRUDCBV(viewsets.ModelViewSet):
     serializer_class = NoidaJobSerializer
     queryset = noidajobs.objects.all().order_by('company')
+    lookup_field = 'id'
+
+class IndoreJobsCRUDCBV(viewsets.ModelViewSet):
+    serializer_class = IndoreJobSerializer
+    queryset = indorejobs.objects.all().order_by('company')
     lookup_field = 'id'

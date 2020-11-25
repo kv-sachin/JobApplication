@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs
+from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs, indorejobs
 
 
 class HydJobsSerializer(ModelSerializer):
@@ -29,4 +29,9 @@ class ChennaiJobsSerializer(ModelSerializer):
 class NoidaJobSerializer(ModelSerializer):
     class Meta:
         model = noidajobs
+        fields = '__all__'
+
+class IndoreJobSerializer(ModelSerializer):
+    class Meta:
+        model = indorejobs
         fields = '__all__'

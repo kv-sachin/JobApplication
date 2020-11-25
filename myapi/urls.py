@@ -9,6 +9,7 @@ router.register(r'punejobs', views.PuneJobsCRUDCBV)
 router.register(r'blorejobs', views.BloreJobsCRUDCBV)
 router.register(r'chennaijobs', views.ChennaiJobsCRUDCBV)
 router.register(r'noidajobs', views.NoidaJobsCRUDCBV)
+router.register(r'indorejobs', views.IndoreJobsCRUDCBV)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -23,5 +24,6 @@ urlpatterns = [
     path(r'^api/(?P<id>\d+)/$', views.NoidaJobsCRUDCBV.as_view()),
     path(r'^api/(?P<id>\d+)/$', views.BloreJobsCRUDCBV.as_view()),
     path(r'^api/(?P<id>\d+)/$', views.ChennaiJobsCRUDCBV.as_view()),
+    path(r'^api/(?P<id>\d+)/$', views.IndoreJobsCRUDCBV.as_view()),
     #path(r'api/punejobsinfo/(?P<pk>[^/.]+)\'[name='punejobs-detail']))
 ]

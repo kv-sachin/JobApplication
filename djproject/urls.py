@@ -26,8 +26,6 @@ urlpatterns = [
     url(r'^punejobs/', views.punejobs1),
     url(r'^chennaijobs/', views.chennaijobs1),
     url(r'^noidajobs/', views.noidajobs1),
-    url(r'^api/', include('testapp.api.urls')),
-
-
-
+    url(r'^indorejobs/', views.indorejobs1),
+    url(r'^api/', include('testapp.api.urls'))
 ]
