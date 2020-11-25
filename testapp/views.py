@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from testapp.models import blorejobs, chennaijobs, hydjobs, punejobs, noidajobs
+from testapp.models import blorejobs, chennaijobs, hydjobs, punejobs, noidajobs, indorejobs
 
 # Create your views here.
 
@@ -78,3 +78,16 @@ def noidajobs1(request):
     except EmptyPage:
         jobs_list = paginator.page(paginator.num_pages)
     return render(request, 'testapp/noidajobs.html', {'jobs_list': jobs_list})
+
+def indorejobs1(request):
+    jobs_list = indorejobs.objects.order_by('-date')
+    paginator = Paginator(jobs_list, 25)
+    page_number = request.GET.get('page')
+
+    try:
+        jobs_list = paginator.page(page_number)
+    except PageNotAnInteger:
+        jobs_list = paginator.page(1)
+    except EmptyPage:
+        jobs_list = paginator.page(paginator.num_pages)
+    return render(request, 'testapp/indorejobs.html', {'jobs_list': jobs_list})

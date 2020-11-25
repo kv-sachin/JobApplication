@@ -1,8 +1,8 @@
 from django.contrib.sites import requests
 from django.middleware import http
 from rest_framework import viewsets
-from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs
-from testapp.api.serializers import HydJobsSerializer, PuneJobsSerializer, ChennaiJobsSerializer, BloreJobsSerializer, NoidaJobSerializer
+from testapp.models import hydjobs, punejobs, blorejobs, chennaijobs, noidajobs, indorejobs
+from testapp.api.serializers import HydJobsSerializer, PuneJobsSerializer, ChennaiJobsSerializer, BloreJobsSerializer, NoidaJobSerializer, IndoreJobSerializer
 
 
 class HydJobsCRUDCBV(viewsets.ModelViewSet):
@@ -28,6 +28,10 @@ class BloreJobsCRUDCBV(viewsets.ModelViewSet):
 class NoidaJobsCRUDCBV(viewsets.ModelViewSet):
     serializer_class = NoidaJobSerializer
     queryset = noidajobs.objects.all().order_by('company')
+
+class IndoreJobsCRUDCBV(viewsets.ModelViewSet):
+    serializer_class = IndoreJobSerializer
+    queryset = indorejobs.objects.all().order_by('company')
 
 
 
