@@ -1,10 +1,12 @@
 # Need to update at 21 Dec 2020
 # This the the requiremnts that need to be added
 
+# Pulled in RHEL at 26-12-2020
+
 asgiref==3.2.3
-Django==1.11.29
-djangorestframework==3.9.4
-pkg-resources==0.0.0
-pytz==2020.4
-sqlparse==0.3.1
+Django==latest
+djangorestframework==latest
+pkg-resources==latest
+pytz==latest
+sqlparse==latest
 
